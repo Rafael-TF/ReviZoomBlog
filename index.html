@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviZoom</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="fade-in">
+      <nav class="contenedor">
+        <div class="logo"><a href="#bienvenido">ReviZoom</a></div>
+        <ul class="nav-links">
+          <li><a href="#bienvenido">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre ReviZoom</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="bienvenido">
+        <h1 class="fade-in">Bienvenido</h1>
+        <a href="#blog" class="cta-button fade-in">ReviZoom Blog</a>
+      </section>
+      <section class="about-me" id="sobre-mi">
+        <div class="about-content">
+          <div class="about-images">
+            <div class="main-image slide-in-left"></div>
+            <div class="secondary-image"></div>
+          </div>
+          <div class="about-text">
+            <h2 class="fade-in-up">SOBRE REVIZOOM</h2>
+            <p class="fade-in-up">
+              ReviZoom es tu guía esencial para navegar por el vasto océano de
+              productos en el mercado. Nos especializamos en ofrecerte análisis
+              detallados y opiniones imparciales para que puedas tomar
+              decisiones de compra informadas y seguras.
+            </p>
+            <p class="fade-in-up">
+              En ReviZoom, nuestra misión es simplificar la búsqueda del
+              producto perfecto para ti. Nos dedicamos a evaluar y revisar una
+              amplia gama de artículos, desde gadgets tecnológicos hasta
+              productos de consumo diario. Cada revisión está basada en pruebas
+              meticulosas y una evaluación exhaustiva, garantizando que solo
+              encuentres las opciones más confiables y recomendables. Nuestro
+              enfoque único combina criterios rigurosos con un formato accesible
+              y fácil de entender. Con ReviZoom, obtendrás una perspectiva clara
+              y objetiva sobre lo que realmente importa en cada compra. Estamos
+              aquí para ayudarte a evitar las sorpresas desagradables y
+              maximizar tu satisfacción con cada elección que hagas.
+            </p>
+            <a href="#contacto" class="cta-button2 fade-in">Contactar</a>
+          </div>
+        </div>
+        <div class="decorative-element rotate-in"></div>
+      </section>
+      <div class="parallax-separador">
+        <div class="overlay">
+          <span class="frase">"El detalle es lo que hace la diferencia"</span>
+        </div>
+      </div>
+      <!-- Sección Blog -->
+      <section id="blog" class="blog-section">
+        <div class="container">
+          <h2 class="fade-in-up">Revi<span class="oro">Zoom</span> Blog</h2>
+
+          <div class="category-filters fade-in-up">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="tecnologia">
+              Tecnología
+            </button>
+            <button class="filter-btn" data-filter="cuidado_personal">
+              Cuidado Personal
+            </button>
+            <button class="filter-btn" data-filter="maquillaje">
+              Maquillaje
+            </button>
+            <button class="filter-btn" data-filter="hogar">Hogar</button>
+          </div>
+
+          <div class="search-bar fade-in-up">
+            <input type="text" placeholder="Buscar artículos..." />
+            <button type="submit">Buscar</button>
+          </div>
+
+          <div class="blog-grid">
+            <a href="/ArticulosBlog/smartphones2024.html" class="article-link">
+              <article class="blog-card fade-in-up" data-category="tecnologia">
+                <img
+                  src="/ArticulosBlog/ImgArticulos/hand-holding-smartphone-with-blank-screen-against-blurred-city-background.jpg"
+                  alt="Los mejores smartphones de 2024"
+                />
+                <div class="blog-card-content">
+                  <h3>Los mejores smartphones de 2024</h3>
+                  <time datetime="2024-08-17"
+                    ><strong>Publicación:</strong> 17 de agosto de 2024</time
+                  >
+                  <p>
+                    Descubre cuáles son los teléfonos más avanzados este año...
+                  </p>
+                  <span class="category">Tecnología</span>
+                  <a
+                    href="/ArticulosBlog/smartphones2024.html"
+                    class="read-more"
+                    >Leer más</a
+                  >
+                </div>
+              </article>
+            </a>
+
+            <a
+              href="/ArticulosBlog/top10SkinCare2024.html"
+              class="article-link"
+            >
+              <article
+                class="blog-card fade-in-up"
+                data-category="cuidado_personal"
+              >
+                <img
+                  src="/ArticulosBlog/ImgArticulos/pexels-misolo-cosmetic-2588316-11179580.jpg"
+                  alt="Los 10 mejores productos de skincare para pieles secas 2024"
+                />
+                <div class="blog-card-content">
+                  <h3>
+                    Los 10 mejores productos de skincare para pieles secas
+                  </h3>
+                  <time datetime="2024-08-18"
+                    ><strong>Publicación:</strong> 18 de agosto de 2024</time
+                  >
+                  <p>
+                    Lo último en skincare: Los 10 productos estrella para pieles
+                    secas...
+                  </p>
+                  <span class="category">Cuidado Personal</span>
+                  <a
+                    href="/ArticulosBlog/top10SkinCare2024.html"
+                    class="read-more"
+                    >Leer más</a
+                  >
+                </div>
+              </article>
+            </a>
+            <a href="/ArticulosBlog/smartwatches2024.html" class="article-link">
+              <article class="blog-card fade-in-up" data-category="tecnologia">
+                <img
+                  src="/ArticulosBlog/ImgArticulos/daniel-romero-h3gFLMJz6QY-unsplash.jpg"
+                  alt="Los mejores smartwatches del 2024"
+                />
+                <div class="blog-card-content">
+                  <h3>Los mejores smartwatches del 2024</h3>
+                  <time datetime="2024-08-18"
+                    ><strong>Publicación:</strong> 18 de agosto de 2024</time
+                  >
+                  <p>
+                    Más que un reloj: tu compañero inteligente. Guía completa de
+                    smartwatches 2024...
+                  </p>
+                  <span class="category">Tecnología</span>
+                  <a
+                    href="/ArticulosBlog/smartwatches2024.html"
+                    class="read-more"
+                    >Leer más</a
+                  >
+                </div>
+              </article>
+            </a>
+            <a href="/ArticulosBlog/robotsAspirador.html" class="article-link">
+              <article class="blog-card fade-in-up" data-category="tecnologia">
+                <img
+                  src="/Recursos/pexels-cottonbro-4107248.jpg"
+                  alt="Revolución en la limpieza: Los robots aspiradores que debes conocer"
+                />
+                <div class="blog-card-content">
+                  <h3>
+                    Revolución en la limpieza: Los robots aspiradores que debes
+                    conocer
+                  </h3>
+                  <time datetime="2024-08-19"
+                    ><strong>Publicación:</strong> 19 de agosto de 2024</time
+                  >
+                  <p>
+                    Robots aspiradores: La inversión que simplificará tu vida...
+                  </p>
+                  <span class="category">Tecnología</span>
+                  <a
+                    href="/ArticulosBlog/robotsAspirador.html"
+                    class="read-more"
+                    >Leer más</a
+                  >
+                </div>
+              </article>
+            </a>
+            <a href="/ArticulosBlog/cafeteras2024.html" class="article-link">
+              <article class="blog-card fade-in-up" data-category="hogar">
+                <img
+                  src="/Recursos/coffee-5804747_1280.jpg"
+                  alt="Título del artículo"
+                />
+                <div class="blog-card-content">
+                  <h3>La Guía Definitiva de Cafeteras 2024</h3>
+                  <time datetime="2024-08-21"
+                    ><strong>Publicación:</strong> 21 de agosto de 2024</time
+                  >
+                  <p>
+                    De Grano a Taza: La Aventura de Elegir la Mejor Cafetera...
+                  </p>
+                  <span class="category">Hogar</span>
+                  <a href="/ArticulosBlog/cafeteras2024.html" class="read-more"
+                    >Leer más</a
+                  >
+                </div>
+              </article>
+            </a>
+          </div>
+
+          <!-- Contenedor de mensaje de no resultados -->
+          <div id="no-results-message" class="fade-in-up" style="display: none">
+            <p>No se encontraron artículos que coincidan con tu búsqueda.</p>
+          </div>
+
+          <div class="pagination fade-in-up">
+            <button class="page-btn">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">Siguiente</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Contacto -->
+      <section class="contacto" id="contacto">
+        <div class="contacto-contenido">
+          <h2 class="fade-in-up">Contacto</h2>
+          <form class="contacto-formulario" id="form">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="apellidos">Apellidos:</label>
+              <input type="text" id="apellidos" name="apellidos" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              class="cta-buttonForm"
+              id="button"
+              value="Enviar"
+            />
+          </form>
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+          ></script>
+
+          <script type="text/javascript">
+            emailjs.init('nLKKXvd-pzHJTju_z');
+          </script>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-contenido">
+        <!-- Encabezado de logo -->
+        <div class="logo">
+          <div class="text">Revi<span class="highlight">Zoom</span></div>
+        </div>
+
+        <!-- Sección de información general -->
+        <div class="footer-info">
+          <p>&copy; 2024 ReviZoom. Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Sección de enlaces de política -->
+        <div class="footer-links">
+          <a href="/Politicas de privacidad y cookies/privacidad.html"
+            >Política de privacidad</a
+          >
+          <a href="/Politicas de privacidad y cookies/cookies.html"
+            >Política de cookies</a
+          >
+        </div>
+
+        <!-- Sección de créditos -->
+        <div class="footer-credits">
+          <p>
+            Desarrollado y diseñado por <strong>Hecatech Solutions</strong> by <strong>Rafael Travado</strong>
+          </p>
+        </div>
+
+        <!-- Sección de redes sociales -->
+        <!-- <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/rafaeltravado"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/rafaeltravado"
+            target="_blank"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="mailto:rafael@example.com" title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="https://www.instagram.com" target="_blank" title="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com" target="_blank" title="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank" title="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>-->
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
