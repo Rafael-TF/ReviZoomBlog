@@ -1,0 +1,1192 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* vh = viewport height */
+}
+
+article {
+  flex: 1 0 auto;
+  margin-bottom: 0; /* Elimina el margen inferior si lo tenías */
+  /* Otros estilos que ya tengas para article */
+}
+
+article::before {
+  content: '';
+  display: block;
+  height: 100px; /* Ajusta según la altura de tu barra de navegación */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 85%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1000;
+  transition: background 0.5s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.logo a {
+  color: #333;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #d4af37;
+  text-shadow: 0 0 5px #fafafa, 0 0 10px #e9dfbf;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-right {
+  display: flex;
+  list-style: none;
+}
+
+.nav-right a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-right a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: darkgoldenrod;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-right a:hover {
+  color: darkgoldenrod;
+}
+
+.nav-right a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.hero a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 687px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilos iniciales para el contenedor del icono de Home */
+.home-icon img {
+  display: block; /* Asegura que la imagen se ajuste bien */
+  width: 24px; /* Tamaño del icono, ajústalo según sea necesario */
+  height: 24px; /* Asegura que la imagen tenga el tamaño correcto */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves para transformación y filtro */
+}
+
+/* Estilos al pasar el ratón por encima */
+.home-icon:hover img {
+  transform: scale(1.2) rotate(15deg); /* Escala y rota la imagen al pasar el ratón */
+  filter: brightness(1.3) contrast(1.2); /* Ajusta el brillo y el contraste para un efecto más llamativo */
+}
+
+.burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+article {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 40px;
+  margin-bottom: -10px; /* Ajusta este valor según sea necesario */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.article-main-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.category {
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contenido {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 30px 0 20px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilo para la galería de teléfonos destacados */
+.all-phones {
+  margin-bottom: 40px;
+}
+
+.phone-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.phone {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box; /* Asegúrate de incluir el padding y el borde en el ancho total */
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.phone h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.affiliate-link {
+  display: block;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.affiliate-link:hover {
+  background-color: #f7ca69;
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image-container {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+}
+/* Consulta de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .phone {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .phone {
+    flex: 1 1 100%;
+  }
+}
+
+/* Estilo para los títulos y el contenido de productos */
+.product-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.product-section p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los contenedores de productos con imagen */
+.product {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.product img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  float: left;
+  margin-right: 20px;
+}
+
+.product-image-container {
+  flex: 0 0 200px; /* Ajusta este valor según el ancho deseado para la imagen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-image-container:hover img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product p {
+  text-align: justify;
+  /* Opcional: para una mejor distribución del texto */
+}
+
+.izquierda h4, .izquierda p{
+padding-right: 50%;
+}
+
+/* Ajustes para el diseño de producto cuando la imagen y el texto están en columna */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product img {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
+.ad-space {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+  width: 100%;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #d4af37;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  position: relative; /* Cambiado de absolute a relative */
+  margin-top: 40px; /* Añadido margen superior */
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.6; /* Añadido para mejorar la legibilidad */
+}
+
+.footer a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Añadida transición suave */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #f1c40f;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+/*PROS Y CONTRAS*/
+
+.pros-cons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pros, .cons {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.pros {
+  background-color: #e6f7e6;
+  margin-right: 10px;
+}
+
+.cons {
+  background-color: #ffe6e6;
+  margin-left: 10px;
+}
+
+.pros h4, .cons h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.pros ul, .cons ul {
+  padding-left: 20px;
+}
+
+.pros li, .cons li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .pros-cons {
+    flex-direction: column;
+  }
+  
+  .pros, .cons {
+    margin: 10px 0;
+  }
+}
+
+/*ESTILOS RANKING*/
+
+.smartwatch-ranking {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.smartwatch-ranking h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.ranking-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.ranking-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ranking-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ranking-item p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.affiliate-link {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.affiliate-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .ranking-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ranking-item {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .smartwatch-ranking h2 {
+    font-size: 1.8rem;
+  }
+
+  .ranking-item {
+    width: 90%;
+  }
+
+  .ranking-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .ranking-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/*SECCIÓN DE GUIA FINAL*/
+
+/* Estilos generales */
+.buying-guide-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buying-guide-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Acordeón */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background-color: #fff;
+  padding: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-header:after {
+  content: '\25BC';
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active:after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  display: none;
+}
+
+.accordion-content p {
+  margin-bottom: 10px;
+}
+
+.accordion-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.accordion-content ul li {
+  margin-bottom: 5px;
+}
+
+/* Estilos de medios */
+@media (max-width: 768px) {
+  .accordion-header {
+    font-size: 1.125rem;
+    padding: 10px;
+  }
+
+  .accordion-content {
+    font-size: 0.875rem;
+    padding: 15px;
+  }
+}
+
+.conclusion-section h2, .conclusion-section p {
+  text-align: center;
+}
+
+/*ESTILOS ARTÍCULOS RELACIONADOS*/
+
+.related-articles {
+  background-color: #ffffff; /* Fondo blanco para un look limpio */
+  border: 1px solid #dcdcdc; /* Borde gris suave */
+  border-radius: 12px; /* Bordes redondeados pero definidos */
+  padding: 25px; /* Espaciado generoso */
+  margin-top: 30px; /* Espacio superior */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.related-articles h2 {
+  font-family:  'Playfair Display', serif; /* Tipografía serif elegante */
+  font-size: 1.75em; /* Tamaño del título */
+  color: #a88734; /* Color gris oscuro */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-weight: 700; /* Título en negrita */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  border-bottom: 2px solid #e3e3e3; /* Línea fina debajo del título */
+  padding-bottom: 10px; /* Espaciado interno */
+}
+
+.related-articles ul {
+  list-style-type: none; /* Sin viñetas en la lista */
+  padding: 0; /* Sin margen ni relleno en la lista */
+  margin: 0;
+}
+
+.related-articles li {
+  margin-bottom: 15px; /* Espaciado entre los elementos de la lista */
+  transition: transform 0.3s ease; /* Suave transformación al pasar el ratón */
+}
+
+.related-articles li:hover {
+  transform: translateX(5px); /* Desplazamiento sutil al pasar el ratón */
+}
+
+.related-articles li:last-child {
+  margin-bottom: 0; /* Sin espacio en el último elemento */
+}
+
+.related-articles a {
+  text-decoration: none; /* Sin subrayado en los enlaces */
+  color: #34495e; /* Color gris oscuro para los enlaces */
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  font-family: 'Lora', serif; /* Fuente serif elegante */
+  font-weight: 600; /* Enlace en negrita */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transición suave en el color */
+  border-bottom: 1px solid transparent; /* Línea fina que aparece al pasar el ratón */
+}
+
+.related-articles a:hover {
+  color: #c0392b; /* Color rojo oscuro al pasar el ratón */
+  border-bottom: 1px solid #c0392b; /* Línea roja que aparece al pasar el ratón */
+}
+
+/* ESTILOS TABLA COMPARATIVA */
+
+/* Contenedor de la tabla */
+.table-container {
+  width: 90%;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Para permitir desplazamiento en pantallas pequeñas */
+}
+
+/* Título de la tabla */
+.cabecera h2 {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Encabezado */
+thead {
+  background-color: #00796b;
+  color: #fff;
+}
+
+thead th {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* Cuerpo de la tabla */
+tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+tbody td {
+  padding: 1rem;
+}
+
+.product-img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+a {
+  color: #c0392b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #a88734;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Hacer la tabla vertical en dispositivos pequeños */
+  thead {
+      display: none;
+  }
+
+  tbody, tr, td {
+      display: block;
+      width: 100%;
+  }
+
+  tbody tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 0.5rem;
+  }
+
+  tbody td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+  }
+
+  tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 1rem;
+      font-weight: bold;
+      text-align: left;
+      color: #555;
+  }
+
+  .product-img {
+      width: 80px;
+      margin-bottom: 10px;
+  }
+}
+
+/* Separador Cafés */
+
+/* Estilos generales para la sección */
+.product-section {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Estilos del separador con animación */
+.section-separator {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #f2f2f2, #ffffff);
+  transform: rotate(-30deg);
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.section-separator:hover::before {
+  opacity: 0.4;
+}
+
+.separator-content {
+  position: relative;
+  z-index: 1;
+}
+
+.separator-content h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.separator-content p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-separator:hover .separator-content h2 {
+  color: darkgoldenrod;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .separator-content h2 {
+    font-size: 2em;
+  }
+  
+  .separator-content p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-separator {
+    padding: 20px 10px;
+  }
+  
+  .separator-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .separator-content p {
+    font-size: 0.9em;
+    margin: 0 10px;
+  }
+}
+
+/* Estilo para el footer */
+.footer {
+  position: relative;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 40px 10%;
+  border-top: 2px solid #d4af37;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor dentro del footer */
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo del logo en el footer */
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-align: center;
+}
+.logo .text {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+}
+.logo .highlight {
+  color: darkgoldenrod;
+}
+.logo .text span {
+  display: inline-block;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.logo .text:hover span {
+  color: #e74c3c;
+  transform: translateY(-5px);
+}
+
+/* Sección de información general */
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Sección de enlaces de política */
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #f1c40f;
+}
+
+/* Sección de redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: #d4af37;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Colores de las redes sociales */
+.social-links a[href*="linkedin.com"]:hover {
+  color: #0077b5; /* LinkedIn */
+}
+
+.social-links a[href*="github.com"]:hover {
+  color: #ddd; /* GitHub */
+}
+
+.social-links a[href*="mailto:"]:hover {
+  color: #ea4335; /* Email (Google red) */
+}
+
+.social-links a[href*="instagram.com"]:hover {
+  color: #c13584; /* Instagram */
+}
+
+.social-links a[href*="facebook.com"]:hover {
+  color: #1877f2; /* Facebook */
+}
+
+.social-links a[href*="twitter.com"]:hover {
+  color: #1da1f2; /* Twitter */
+}
+
+.social-links a:hover {
+  color: inherit; /* Mantiene el color característico de la red social */
+}
+
+/* Estilo para la sección de créditos */
+.footer-credits {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b3b3b3;
+  text-align: center;
+}
+
+.footer-credits p {
+  margin: 5px 0;
+  font-style: italic;
+  line-height: 1.4; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
+}
+
+.footer-credits strong {
+  color: #e0e0e0;
+}
+
+/* Estilo adicional para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 5%;
+  }
+
+  .footer-info p,
+  .footer-credits p {
+    font-size: 13px; /* Disminuye ligeramente el tamaño de la fuente para pantallas pequeñas */
+    line-height: 1.5; /* Mejora la legibilidad en pantallas pequeñas */
+  }
+
+  .footer-credits p {
+    margin: 10px 0; /* Aumenta el margen entre los párrafos para evitar que se vean muy juntos */
+  }
+
+  .footer-links a {
+    display: block; /* Cambia a bloque para que los enlaces se apilen en lugar de estar uno al lado del otro */
+    margin: 5px 0; /* Espacio entre los enlaces */
+  }
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
+
+
+
+
